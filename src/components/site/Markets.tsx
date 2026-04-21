@@ -1,8 +1,9 @@
 import { Reveal } from "./Reveal";
 
 const industries = [
-  "Precious Metals",
   "Gold Trading",
+  "Silver Trading",
+  "Precious Metals",
   "Commodity Supply",
   "Import & Export Support",
   "Trade Marketing",
@@ -29,12 +30,21 @@ export const Markets = () => {
               Industries we operate within.
             </h2>
             <ul className="mt-12 space-y-1">
-              {industries.map((i, idx) => (
-                <li key={i} className="border-b border-background/10 py-4 flex items-baseline gap-6">
+              {industries.map((item, idx) => (
+                <li key={item} className="border-b border-background/10 py-4 flex items-baseline gap-6">
                   <span className="font-serif text-sm text-background/40 w-8">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-serif text-xl">{i}</span>
+                  <span className="font-serif text-xl">{item}</span>
+                  {(item === "Gold Trading" || item === "Silver Trading") && (
+                    <span
+                      className={`ml-auto text-[10px] uppercase tracking-[0.2em] font-medium ${
+                        item === "Gold Trading" ? "text-amber-400/80" : "text-slate-300/80"
+                      }`}
+                    >
+                      Core
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

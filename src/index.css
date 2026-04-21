@@ -30,6 +30,12 @@
     --accent-foreground: 30 15% 10%;
     --accent-soft: 40 50% 88%;
 
+    /* Silver accent */
+    --silver: 220 8% 60%;
+    --silver-foreground: 220 10% 15%;
+    --silver-soft: 220 10% 92%;
+    --gradient-silver: linear-gradient(135deg, hsl(220 12% 78%), hsl(220 6% 48%));
+
     --destructive: 0 70% 45%;
     --destructive-foreground: 40 30% 98%;
 
@@ -87,6 +93,13 @@
 @layer utilities {
   .text-gold {
     background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-silver {
+    background: var(--gradient-silver);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

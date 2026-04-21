@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/gold-hero.jpg";
+import silverImg from "@/assets/silver-hero.png";
 
 import type { Variants } from "framer-motion";
 
@@ -29,9 +30,10 @@ export const Hero = () => {
             animate="show"
             custom={1}
             variants={fade}
-            className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight"
+            className="font-serif text-4xl md:text-5xl lg:text-[4.7rem] leading-[1.02] tracking-tight"
           >
-            Trusted partner in <em className="text-gold not-italic font-medium">gold</em>, commodities & global opportunities.
+            Trusted partner in <em className="text-gold not-italic font-medium">gold</em>,{" "}
+            <em className="text-silver not-italic font-medium">silver</em>, commodities & global opportunities.
           </motion.h1>
 
           <motion.p
@@ -42,7 +44,8 @@ export const Hero = () => {
             className="text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
             First Oriental Metals Marketing Company connects buyers, sellers, and strategic
-            partners through integrity, market knowledge, and professional service.
+            partners through integrity, market knowledge, and professional service — specializing
+            in gold, silver, and precious metals.
           </motion.p>
 
           <motion.div initial="hidden" animate="show" custom={3} variants={fade} className="flex flex-wrap gap-4 pt-2">
@@ -80,18 +83,49 @@ export const Hero = () => {
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img
-              src={heroImg}
-              alt="Gold bullion bars representing precious metal trading"
-              className="w-full h-full object-cover"
-              width={1600}
-              height={1200}
-            />
+          {/* Dual metal image stack */}
+          <div className="relative">
+            {/* Gold image — primary */}
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={heroImg}
+                alt="Gold bullion bars representing precious metal trading"
+                className="w-full h-full object-cover"
+                width={1600}
+                height={1200}
+              />
+            </div>
+
+            {/* Silver image — overlapping accent card */}
+            <motion.div
+              initial={{ opacity: 0, x: 40, y: 20 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute -bottom-8 -left-8 w-[55%] aspect-[4/3] overflow-hidden border-4 border-background shadow-elegant"
+            >
+              <img
+                src={silverImg}
+                alt="Silver bullion bars representing silver trading"
+                className="w-full h-full object-cover"
+                width={800}
+                height={600}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-medium">Silver Trading</span>
+              </div>
+            </motion.div>
           </div>
-          <div className="absolute -bottom-6 -left-6 bg-background border border-border px-6 py-4 shadow-soft">
+
+          {/* Core focus badge */}
+          <div className="absolute -bottom-6 right-0 bg-background border border-border px-6 py-4 shadow-soft">
             <div className="eyebrow mb-1">Core Focus</div>
-            <div className="font-serif text-xl">Gold · Metals · Commodities</div>
+            <div className="font-serif text-xl">
+              <span className="text-gold">Gold</span>
+              {" · "}
+              <span className="text-silver">Silver</span>
+              {" · Metals"}
+            </div>
           </div>
         </motion.div>
       </div>

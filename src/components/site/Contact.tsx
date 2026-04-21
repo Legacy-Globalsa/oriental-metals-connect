@@ -21,7 +21,9 @@ export const Contact = () => {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We welcome business inquiries, partnership opportunities, supplier
-            introductions, and serious buyer engagements.
+            introductions, and serious buyer engagements — whether for{" "}
+            <span className="text-gold font-medium">gold</span>,{" "}
+            <span className="text-silver font-medium">silver</span>, or other commodities.
           </p>
 
           <div className="space-y-6 pt-6 border-t border-border">
@@ -59,6 +61,7 @@ export const Contact = () => {
               <label className="eyebrow text-[10px] block mb-2">Inquiry Type</label>
               <select className="w-full bg-transparent border-b border-border focus:border-foreground outline-none py-2 transition-colors">
                 <option>Gold Trade Inquiry</option>
+                <option>Silver Trade Inquiry</option>
                 <option>Commodity Trading</option>
                 <option>Partnership Discussion</option>
                 <option>Supplier Introduction</option>

@@ -14,7 +14,9 @@ export const Footer = () => {
           </div>
           <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
             A Philippines-based trading and marketing company connecting reliable
-            buyers, sellers, and strategic partners in gold and commodities.
+            buyers, sellers, and strategic partners in{" "}
+            <span className="text-gold font-medium">gold</span>,{" "}
+            <span className="text-silver font-medium">silver</span>, and commodities.
           </p>
         </div>
 
@@ -36,6 +38,13 @@ export const Footer = () => {
           <p className="text-sm text-foreground/70 leading-relaxed">
             San Pedro, Laguna<br />Philippines
           </p>
+          <div className="mt-6">
+            <div className="eyebrow text-[10px] mb-2">Core Metals</div>
+            <div className="flex gap-3">
+              <span className="text-xs px-3 py-1.5 border border-amber-300/40 text-amber-700 bg-amber-50 font-medium">Gold</span>
+              <span className="text-xs px-3 py-1.5 border border-slate-300/60 text-slate-600 bg-slate-50 font-medium">Silver</span>
+            </div>
+          </div>
         </div>
       </div>
       <div className="border-t border-border">

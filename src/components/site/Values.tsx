@@ -1,11 +1,11 @@
 import { Reveal } from "./Reveal";
 
 const values = [
-  ["Integrity", "Trust is the foundation of every successful transaction."],
-  ["Professionalism", "We handle business with discipline, respect, and accountability."],
-  ["Commitment", "Dedicated to serving clients and partners with consistency and purpose."],
-  ["Partnership", "We value long-term relationships over short-term gains."],
-  ["Excellence", "High standards in communication, coordination, and execution."],
+  ["Integrity", "Trust is the foundation of every successful transaction.", "text-gold"],
+  ["Professionalism", "We handle business with discipline, respect, and accountability.", "text-silver"],
+  ["Commitment", "Dedicated to serving clients and partners with consistency and purpose.", "text-gold"],
+  ["Partnership", "We value long-term relationships over short-term gains.", "text-silver"],
+  ["Excellence", "High standards in communication, coordination, and execution.", "text-gold"],
 ];
 
 export const Values = () => {
@@ -20,10 +20,10 @@ export const Values = () => {
         </Reveal>
 
         <div className="grid md:grid-cols-5 gap-px bg-border">
-          {values.map(([title, desc], i) => (
+          {values.map(([title, desc, accent], i) => (
             <Reveal key={title} delay={i * 0.08}>
-              <div className="bg-background p-8 h-full text-center">
-                <div className="font-serif text-5xl text-gold mb-6">
+              <div className="bg-background p-8 h-full text-center group hover:bg-secondary/40 transition-colors duration-700">
+                <div className={`font-serif text-5xl ${accent} mb-6`}>
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="font-serif text-xl mb-3">{title}</h3>
