@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/gold-hero.jpg";
 
-const fade = {
+import type { Variants } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const fade: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, delay: 0.1 * i, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.9, delay: 0.1 * i, ease },
   }),
 };
 
