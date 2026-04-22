@@ -35,6 +35,12 @@ export const Contact = () => {
               </div>
             </div>
             <div>
+              <div className="eyebrow text-[10px] mb-2">Email</div>
+              <a href="mailto:rollin@firstorientalmetals.com" className="font-serif text-lg hover:text-gold transition-colors">
+                rollin@firstorientalmetals.com
+              </a>
+            </div>
+            <div>
               <div className="eyebrow text-[10px] mb-2">Inquiries</div>
               <div className="font-serif text-lg">For partnership & trade discussions</div>
             </div>

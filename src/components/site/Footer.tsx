@@ -38,6 +38,12 @@ export const Footer = () => {
           <p className="text-sm text-foreground/70 leading-relaxed">
             San Pedro, Laguna<br />Philippines
           </p>
+          <div className="mt-4">
+            <div className="eyebrow text-[10px] mb-2">Email</div>
+            <a href="mailto:rollin@firstorientalmetals.com" className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+              rollin@firstorientalmetals.com
+            </a>
+          </div>
           <div className="mt-6">
             <div className="eyebrow text-[10px] mb-2">Core Metals</div>
             <div className="flex gap-3">
